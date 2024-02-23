@@ -44,6 +44,8 @@ body{
 .page-header{
     border-bottom: 1px solid #E7E9FC;
     color: #FFFFFF;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    
 }
 .page-nav{
     display:flex;
@@ -61,9 +63,21 @@ body{
         line-height: 1.17;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        margin-right: 76px;
-       
-         
+        margin-right: 76px;      
+}
+
+ .underline:active::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100% ;
+    height: 4px ;
+    background-color:#404BBF ;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -1px;
 }
 .color-studio{
     color: #2E2F42;
@@ -80,19 +94,18 @@ body{
 .page-item:last-child{
     margin-right: 0;
 }
-.page-item:hover,
-.page-item:active {
-    color: #404BBF;
-} 
+
 .link{
+    position: relative;
     padding: 24px 0;
     display: block;
     color: #2E2F42;
 }
 
-.items:hover ,
-.items:focus {
+.link:hover ,
+.link:focus {
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-page{
@@ -115,10 +128,12 @@ body{
      font-size: 16px;
       display: flex;
       gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-link:hover ,
 .contacts-link:focus{
     color:#404BBF;
+    
     
 }
 /* First Section  */
@@ -127,7 +142,9 @@ body{
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-            url(../images/hero/people-office.jpg) ; 
+            url(../images/hero/people-office.jpg) ;
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
 }
 .main-title{
@@ -169,11 +186,13 @@ body{
     padding-left:32px;
     padding-right: 32px;
     margin: auto;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button:hover ,
 .button:focus{
   background-color: #404BBF;
+
 }
 /* Section 2 */
 .descr-section{
@@ -218,9 +237,7 @@ padding: 120px 0;
     clip:rect(0 0 0 0);
     overflow: hidden;
 }
-.text-items .icon{
- 
-}
+
 .text-list{
     display: flex;
     gap:24px;
@@ -259,9 +276,9 @@ font-weight: 700;
         flex-shrink: 0;
         gap:24px;
         align-self: flex-end;
-        justify-content: center;
+        justify-content:center;
 }
-.icons-team-list .icons-team {
+ .icons-team {
     display: flex;
     width: 40px;
     height: 40px;
@@ -270,12 +287,14 @@ font-weight: 700;
     justify-content: center;
     align-items: center;
     margin-top: 8px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .icons-team-list .icons-team:hover{
    background-color:#31D0AA;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.background-color{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 .background-color:first-child {
     width: calc((100% - 72px) / 4);
 }
@@ -307,12 +326,14 @@ font-weight: 700;
     color: #2E2F42;
     margin-bottom: 72px;
 }
+
 .portfolio-list{
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
 }
+
 .portf-background-color{
     width: calc((100% - 48px) / 3);
 }
@@ -336,6 +357,30 @@ font-weight: 700;
 
 .portf-background-color{
     color: #E7E9FC;
+    transition: transform 250ms ease-in-out;
+    
+}
+.image-overlay{
+     overflow: hidden;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+}
+.portf-background-color:hover{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.portf-background-color:hover .overlay{
+    transform:translateY(0);
 }
 .item-name{
 font-weight: 500;
@@ -375,8 +420,6 @@ font-weight: 500;
      letter-spacing: 0.03em;
     text-decoration: none;
 }
-
-
 .footer-page .color-studio{
     color: #F4F4FD;
 }
