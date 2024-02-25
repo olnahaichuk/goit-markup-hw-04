@@ -145,6 +145,8 @@ body{
 .main-section {
     padding: 188px 0;
     max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -284,7 +286,6 @@ font-weight: 700;
         gap:24px;
         align-self: flex-end;
         justify-content:center;
-        margin-top: 8px;
 
 }
 .icons-team-img{
@@ -325,6 +326,9 @@ font-weight: 700;
 }
 .emp-name{
     padding: 32px 0;
+}
+.emp-name .descr{
+    margin-bottom: 8px;
 }
 .emp-name .item-name,
 .emp-name .descr{
@@ -485,7 +489,7 @@ font-weight: 500;
     justify-content: center;
 }
 .icon-footer {
-   color: #f4f4fd; 
+    fill: #f4f4fd; 
     width: 24px;
     height: 24px;
 }
