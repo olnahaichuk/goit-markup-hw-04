@@ -78,9 +78,12 @@ body{
     margin-left: auto;
     margin-right: auto;
     bottom: -1px;
+    
 }
 .link.active{
-    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color:  #404bbf;
+    
 }
 .color-studio{
     color: #2E2F42;
@@ -102,7 +105,6 @@ body{
     position: relative;
     padding: 24px 0;
     display: block;
-    color: #2E2F42;
     
 }
 
@@ -295,8 +297,7 @@ font-weight: 700;
 }
 .icons-team .icon{
     fill:#f4f4fd;
-    width: 16px;
-    height: 16px;
+
 }
  .icons-team {
     display: flex;
@@ -308,8 +309,9 @@ font-weight: 700;
     align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
-.icons-team-list .icons-team:hover{
-   background-color:#31D0AA;
+.icons-team-list .icons-team:hover ,
+.icons-team-list .icons-team:focus{
+   background-color:#404BBF;
 }
 .background-color{
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -357,9 +359,6 @@ font-weight: 700;
     row-gap: 48px;
 }
 
-.portf-background-color{
-    width: calc((100% - 48px) / 3);
-}
 .portfolio-list:nth-child(2n+1){
     margin-right: 0;
 }
@@ -379,6 +378,7 @@ font-weight: 700;
 }
 
 .portf-background-color{
+    width: calc((100% - 48px) / 3);
     color: #E7E9FC;
     transition: transform 250ms ease-in-out ,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -399,7 +399,7 @@ font-weight: 700;
     padding: 40px 32px;
     transform: translateY(100%);
     background-color: #4d5ae5;
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .portf-background-color:hover{
@@ -475,9 +475,14 @@ font-weight: 500;
     margin-bottom: 16px;
 
 }
-.icon-item{
+.icon-item {
     width: 40px;
     height: 40px;
+
+}
+.icons-team.infooter:hover ,
+.icons-team.infooter:focus{
+     background-color: #31D0AA;
 }
 .icons-team{
     width:100%;
@@ -490,8 +495,6 @@ font-weight: 500;
 }
 .icon-footer {
     fill: #f4f4fd; 
-    width: 24px;
-    height: 24px;
 }
 .text-social{
 font-weight: 500;
